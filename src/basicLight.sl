@@ -1,4 +1,4 @@
-surface helloWorld
+surface basicLight
 (
     uniform float Ka = 1;
     uniform float Kd = 1;
