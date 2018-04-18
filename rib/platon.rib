@@ -14,7 +14,7 @@ LightSource "ambientlight" 0 "intensity" [0.5] "lightcolor" [0 0 1]
 LightSource "distantlight" 1 "from" [0 1 -1] "to" [0 0 0] "lightcolor" [1 0 0]
  
 # Camera transformation
-Translate .5 -1 23
+Translate .5 -1.75 23
 Rotate 60 1 0 0
 Rotate -20 0 0 1
 
@@ -147,23 +147,17 @@ AttributeBegin
         Translate -3 -3 0
         # column begin
             TransformBegin
-                Surface "helloWorld" "Kd" [0] "Ks" [0]
-
                 Scale 1 1 0.3
                 ObjectInstance 0
             TransformEnd
 
             TransformBegin
-                Surface "helloWorld" "Kd" [1] "Ks" [1]
-
                 Translate 0 0 -3
                 Cylinder .85 .15 3 360
             TransformEnd
 
             TransformBegin
                 Translate 0 0 -3
-                    Surface "helloWorld" "Kd" [0] "Ks" [0]
-
                 TransformBegin
                     Scale 1 1 0.3
                     ObjectInstance 0
