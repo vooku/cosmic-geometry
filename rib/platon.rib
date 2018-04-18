@@ -24,7 +24,7 @@ Identity
  
 AttributeBegin
     Color [1 1 1]
-    Surface "helloWorld" "Kd" [1] "Ks" [3]
+    Surface "basicLight" "Kd" [1] "Ks" [3]
     
     # cube
     ObjectBegin 0
@@ -153,7 +153,9 @@ AttributeBegin
 
             TransformBegin
                 Translate 0 0 -3
-                Cylinder .85 .15 3 360
+                Displacement "columnFlutes"
+                Cylinder .9 .15 3 360
+                Displacement "null"
             TransformEnd
 
             TransformBegin
@@ -181,7 +183,9 @@ AttributeBegin
 
             TransformBegin
                 Translate 0 0 -3
-                Cylinder .85 .15 3 360
+                Displacement "columnFlutes"
+                Cylinder .9 .15 3 360
+                Displacement "null"
             TransformEnd
 
             TransformBegin
@@ -209,7 +213,9 @@ AttributeBegin
 
             TransformBegin
                 Translate 0 0 -3
-                Cylinder .85 .15 3 360
+                Displacement "columnFlutes"
+                Cylinder .9 .15 3 360
+                Displacement "null"
             TransformEnd
 
             TransformBegin
@@ -234,7 +240,9 @@ AttributeBegin
 
             TransformBegin
                 Translate 0 0 -3
-                Cylinder .85 .15 3 360
+                Displacement "columnFlutes"
+                Cylinder .9 .15 3 360
+                Displacement "null"
             TransformEnd
 
             TransformBegin
@@ -260,7 +268,9 @@ AttributeBegin
 
             TransformBegin
                 Translate 0 0 -3
-                Cylinder .85 .15 3 360
+                Displacement "columnFlutes"
+                Cylinder .9 .15 3 360
+                Displacement "null"
             TransformEnd
 
             TransformBegin
@@ -288,7 +298,9 @@ AttributeBegin
 
             TransformBegin
                 Translate 0 0 -3
-                Cylinder .85 .15 3 360
+                Displacement "columnFlutes"
+                Cylinder .9 .15 3 360
+                Displacement "null"
             TransformEnd
 
             TransformBegin
