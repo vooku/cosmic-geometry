@@ -1,0 +1,31 @@
+##RenderMan RIB-Structure 1.0
+ 
+Option "searchpath" "string shader" ["./bin:@"]
+
+PixelSamples 1 1 # one sample per pixel, no jittering
+PixelFilter "box" 1 1
+Hider "hidden" "jitter" [0]
+
+FrameBegin 1
+Display "sun.depth" "zfile" "z"
+#Display "shadow.tif" "file" "rgba"
+Projection "perspective" "fov" 65
+ShadingRate 4
+Format 512 512 1
+
+# Camera transformation
+Translate 0 5 15
+Rotate -18.43 1 0 0
+
+LightSource "shadowDistant" 1 "from" [0 5 -15] "to" [0 0 0] "lightcolor" [1 0 0]
+
+WorldBegin
+Identity
+AttributeBegin
+    Color [1 1 1]
+    Surface "basicLight" "Kd" [1] "Ks" [3]
+    
+    ReadArchive "./rib/geometry.rib"
+AttributeEnd
+WorldEnd
+FrameEnd
