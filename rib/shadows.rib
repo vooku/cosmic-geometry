@@ -14,8 +14,8 @@ ShadingRate 4
 Format 512 512 1
 
 # Camera transformation
+Rotate 18.43 1 0 0
 Translate 0 5 15
-Rotate -18.43 1 0 0
 
 LightSource "shadowDistant" 1 "from" [0 5 -15] "to" [0 0 0] "lightcolor" [1 0 0]
 
