@@ -112,12 +112,14 @@ ObjectEnd
 
 
 # floor
+Surface "basicLight"
 Disk 0.0 8 360 
 
 # cube
 TransformBegin
     Translate -3 -1.75 0
     # column begin
+        Surface "marble1" "float txtscale" [3.0]
         TransformBegin
             Scale 1 1 0.3
             ObjectInstance 0
@@ -135,6 +137,7 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
+        Surface "basicLight"
     # column end
     Translate 0 0 -4.45
     Scale .7 .7 .7
@@ -147,6 +150,7 @@ TransformEnd
 TransformBegin
     Translate 0 -1.75 0
     # column begin
+        Surface "marble1" "float txtscale" [3.0]
         TransformBegin
             Scale 1 1 0.3
             ObjectInstance 0
@@ -164,6 +168,7 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
+        Surface "basicLight"
     # column end
     Translate 0 0 -3.8
     Scale .7 .7 .7
@@ -176,6 +181,7 @@ TransformEnd
 TransformBegin
     Translate 3 -1.75 0
     # column begin
+        Surface "marble1" "float txtscale" [3.0]
         TransformBegin
             Scale 1 1 0.3
             ObjectInstance 0
@@ -193,6 +199,7 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
+       Surface "basicLight"
     # column end
     Translate 0 0 -4.45
     ObjectInstance 3
@@ -202,6 +209,7 @@ TransformEnd
 TransformBegin
     Translate -3 1.75 0
     # column begin
+        Surface "marble1" "float txtscale" [3.0]
         TransformBegin
             Scale 1 1 0.3
             ObjectInstance 0
@@ -219,6 +227,7 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
+        Surface "basicLight"
     # column end
     Translate 0 0 -4.45
     Scale .7 .7 .7
@@ -229,6 +238,7 @@ TransformEnd
 TransformBegin
     Translate 0 1.75 0
     # column begin
+        Surface "marble1" "float txtscale" [3.0]
         TransformBegin
             Scale 1 1 0.3
             ObjectInstance 0
@@ -246,6 +256,7 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
+        Surface "basicLight"
     # column end
     Translate 0 0 -3.45
     Rotate 180 1 0 0
@@ -258,6 +269,7 @@ TransformEnd
 TransformBegin
     Translate 3 1.75 0
     # column begin
+        Surface "marble1" "float txtscale" [3.0]
         TransformBegin
             Scale 1 1 0.3
             ObjectInstance 0
@@ -275,6 +287,7 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
+        Surface "basicLight"
     # column end
     Translate 0 0 -4.3
     Scale .6 .6 .6

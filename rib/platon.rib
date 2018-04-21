@@ -4,14 +4,13 @@ Option "searchpath" "string shader" ["./bin:@"]
 
 FrameBegin 1
 Display "platon.tif" "file" "rgba"
-Format 800 600 -1
+Format 1024 768 -1
 ShadingRate 1
 Projection "perspective" "fov" [30]
-FrameAspectRatio 1.33
 Identity
 
-LightSource "ambientlight" 0 "intensity" [0.5] "lightcolor" [0 0 1]
-LightSource "shadowDistant" 1 "from" [0 5 -15] "to" [0 0 0] "lightcolor" [1 0 0] "string shadowfile" "sun.tdl"
+#LightSource "ambientlight" 0 "intensity" [0.5] "lightcolor" [0 0 1]
+LightSource "shadowDistant" 1 "from" [0 5 -15] "to" [0 0 0] "lightcolor" [1 1 1] "string shadowfile" "sun.tdl"
 
 # Camera transformation
 Translate .5 -1.75 23
@@ -23,9 +22,6 @@ WorldBegin
  
 Identity
 AttributeBegin
-    Color [1 1 1]
-    Surface "basicLight" "Kd" [1] "Ks" [3]
-    
     ReadArchive "./rib/geometry.rib"
 AttributeEnd 
 WorldEnd 

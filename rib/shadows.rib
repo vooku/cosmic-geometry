@@ -9,7 +9,7 @@ Hider "hidden" "jitter" [0]
 FrameBegin 1
 Display "sun.depth" "zfile" "z"
 #Display "shadow.tif" "file" "rgba"
-Projection "perspective" "fov" 65
+Projection "perspective" "fov" 35
 ShadingRate 4
 Format 512 512 1
 
@@ -21,10 +21,7 @@ LightSource "shadowDistant" 1 "from" [0 5 -15] "to" [0 0 0] "lightcolor" [1 0 0]
 
 WorldBegin
 Identity
-AttributeBegin
-    Color [1 1 1]
-    Surface "basicLight" "Kd" [1] "Ks" [3]
-    
+AttributeBegin 
     ReadArchive "./rib/geometry.rib"
 AttributeEnd
 WorldEnd

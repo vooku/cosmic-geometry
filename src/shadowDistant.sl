@@ -1,5 +1,4 @@
-light
-shadowDistant
+light shadowDistant
 (
     float intensity = 1;
     color lightcolor = 1;
