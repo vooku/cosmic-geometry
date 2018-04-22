@@ -15,8 +15,8 @@ void voronoi_f1f2_3d
         for (j = -1; j <= 1; j += 1) {
             for (k = -1; k <= 1; k += 1) {
                 point testcell = thiscell + vector(i,j,k);
-                point pos = point(testcell + vector cellnoise(testcell) - 0.5);
-                vector offset = pos - P;
+                vector offset = vector(cellnoise(testcell) + vector noise(P * 2) * 0.3);
+                point pos = point(testcell + offset - 0.5);
                 float dist = distance(pos, P);
 
               if (dist < f1) {
@@ -50,7 +50,7 @@ surface voronoi
     point pos1, pos2;
     voronoi_f1f2_3d(P, f1, f2, pos1, pos2);
 
-    f1 += noise(xcomp(P) * frequency, ycomp(P) * frequency) * 0.2 - 0.025;
+    f1 += noise(xcomp(P) * frequency, ycomp(P) * frequency) * 0.1 - 0.025;
     Ci = step(0.05, f2-f1);
     Ci = mix(gapColor, tileColor, Ci);
 
