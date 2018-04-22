@@ -113,13 +113,13 @@ ObjectEnd
 # floor
 Surface "basicLight"
 Surface "voronoi" "color gapColor" [0.15 0.1 0] "color tileColor" [0.82 0.66 0.6] "float frequency" [5]
+
 TransformBegin
     #Scale 8 8 0.1
     #ObjectInstance 0
     Translate 0 0 0.15
     Disk 0 8 360
 TransformEnd
-
 
 # cube
 TransformBegin
@@ -143,8 +143,8 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
-        Surface "basicLight"
     # column end
+    Surface "wood" "color lighter" [0.8 0.47 0.2] "color darker" [0.51 0.21 0.08] "float txtscale" [50]
     Translate 0 0 -4.45
     Scale .7 .7 .7
     Rotate 45 1 0 0
@@ -174,8 +174,8 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
-        Surface "basicLight"
     # column end
+    Surface "wood" "color lighter" [0.8 0.47 0.2] "color darker" [0.51 0.21 0.08] "float txtscale" [50]
     Translate 0 0 -3.8
     Scale .7 .7 .7
     Rotate 45 1 0 0
@@ -205,8 +205,8 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
-       Surface "basicLight"
     # column end
+    Surface "wood" "color lighter" [0.8 0.47 0.2] "color darker" [0.51 0.21 0.08] "float txtscale" [50]
     Translate 0 0 -4.45
     ObjectInstance 3
 TransformEnd
@@ -233,8 +233,8 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
-        Surface "basicLight"
     # column end
+    Surface "wood" "color lighter" [0.8 0.47 0.2] "color darker" [0.51 0.21 0.08] "float txtscale" [50]
     Translate 0 0 -4.45
     Scale .7 .7 .7
     ObjectInstance 4
@@ -262,8 +262,8 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
-        Surface "basicLight"
     # column end
+    Surface "wood" "color lighter" [0.8 0.47 0.2] "color darker" [0.51 0.21 0.08] "float txtscale" [50]
     Translate 0 0 -3.45
     Rotate 180 1 0 0
     Rotate 90 0 0 1
@@ -293,8 +293,8 @@ TransformBegin
                 ObjectInstance 0
             TransformEnd
         TransformEnd
-        Surface "basicLight"
     # column end
+    Surface "wood" "color lighter" [0.8 0.47 0.2] "color darker" [0.51 0.21 0.08] "float txtscale" [50]
     Translate 0 0 -4.3
     Scale .6 .6 .6
     ObjectInstance 6
