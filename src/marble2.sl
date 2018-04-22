@@ -1,3 +1,19 @@
+float turbulence
+(
+    point P;
+    float originalLod;
+)
+{
+    float lod = originalLod;
+    float turb = 0;
+    while (lod >= 1) {
+        turb += noise(P * lod);
+        lod /= 2;
+    }
+    turb /= log(originalLod, 2) + 1;
+    return turb;
+}
+
 surface marble2
 (
     float Ka = 1,
@@ -12,17 +28,9 @@ surface marble2
 {
     normal Nn = faceforward(normalize(N), I);
     float scale = txtscale * 30;
-    float turbulence = 0;
-    float lod = pow(2, 2 + txtscale);
-    float originalLod = lod;
-    while (lod >= 1) {
-        //turbulence += noise(u * lod, v * lod);
-        turbulence += noise(transform("object", P) * lod);
-        lod /= 2;
-    }
-    turbulence /= log(originalLod, 2) + 1;
+    float turb = turbulence(transform("world", P), pow(2, 2 + txtscale));
 
-    float c =  (1 + sin((u + v + turbulence) * scale)) / 2;
+    float c =  (1 + sin((u + v + turb) * scale)) / 2;
     c += mix(c, step(c, 0.5), 0.5);
     c = clamp(c, 0, 1);
 

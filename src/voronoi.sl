@@ -1,3 +1,19 @@
+float turbulence
+(
+    point P;
+    float originalLod;
+)
+{
+    float lod = originalLod;
+    float turb = 0;
+    while (lod >= 1) {
+        turb += noise(P * lod);
+        lod /= 2;
+    }
+    turb /= log(originalLod, 2) + 1;
+    return turb;
+}
+
 void voronoi_f1f2_3d
 (
     point P;
@@ -15,7 +31,7 @@ void voronoi_f1f2_3d
         for (j = -1; j <= 1; j += 1) {
             for (k = -1; k <= 1; k += 1) {
                 point testcell = thiscell + vector(i,j,k);
-                vector offset = vector(cellnoise(testcell) + vector noise(P * 2) * 0.3);
+                vector offset = vector(cellnoise(testcell) + vector turbulence(P, 8) * 0.3);
                 point pos = point(testcell + offset - 0.5);
                 float dist = distance(pos, P);
 
