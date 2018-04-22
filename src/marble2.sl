@@ -28,9 +28,9 @@ surface marble2
 {
     normal Nn = faceforward(normalize(N), I);
     float scale = txtscale * 30;
-    float turb = turbulence(transform("world", P), pow(2, 2 + txtscale));
-
-    float c =  (1 + sin((u + v + turb) * scale)) / 2;
+    point Pp = transform("world", P);
+    float turb = turbulence(Pp, pow(2, 2 + txtscale));
+    float c =  (1 + sin((xcomp(Pp) + ycomp(Pp) + turb * 1.5) * scale)) / 2;
     c += mix(c, step(c, 0.5), 0.5);
     c = clamp(c, 0, 1);
 

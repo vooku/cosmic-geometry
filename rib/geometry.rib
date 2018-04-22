@@ -110,8 +110,16 @@ ObjectBegin 6
          -1.618  1 0]# 11
 ObjectEnd
 
+# background
+Color 0.2 0 0.1
+Surface "basicLight" 
+TransformBegin
+    Translate 0 8 0
+    Scale 100 0 100
+    ObjectInstance 0
+TransformEnd
+
 # floor
-Surface "basicLight"
 Surface "voronoi" "color gapColor" [0.15 0.1 0] "color tileColor" [0.82 0.66 0.6] "float frequency" [5]
 
 TransformBegin
