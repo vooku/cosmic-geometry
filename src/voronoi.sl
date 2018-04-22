@@ -38,7 +38,7 @@ surface voronoi
 (
     float Ka = 1,
           Kd = 1,
-          frequency = 10;
+          frequency = 5;
     color tileColor = color(0),
           gapColor = color(1),
           specularColor = color(1);
@@ -50,7 +50,7 @@ surface voronoi
     point pos1, pos2;
     voronoi_f1f2_3d(P, f1, f2, pos1, pos2);
 
-    f1 += noise(u * frequency, v * frequency) * 0.2 - 0.025;
+    f1 += noise(xcomp(P) * frequency, ycomp(P) * frequency) * 0.2 - 0.025;
     Ci = step(0.05, f2-f1);
     Ci = mix(gapColor, tileColor, Ci);
 

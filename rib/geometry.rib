@@ -112,12 +112,12 @@ ObjectEnd
 
 # floor
 Surface "basicLight"
-Surface "voronoi" "color gapColor" [0.15 0.1 0] "color tileColor" [0.82 0.66 0.6] "float frequency" [30]
-TransformBegin
-    Scale 8 8 0.1
-    ObjectInstance 0    
-TransformEnd
-
+Surface "voronoi" "color gapColor" [0.15 0.1 0] "color tileColor" [0.82 0.66 0.6] "float frequency" [5]
+#TransformBegin
+    #Scale 8 8 0.1
+    #ObjectInstance 0    
+#TransformEnd
+Disk 0.5 8 360
 
 # cube
 TransformBegin
