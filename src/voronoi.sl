@@ -58,6 +58,7 @@ surface voronoi
     color tileColor = color(0),
           gapColor = color(1),
           specularColor = color(1);
+    string bakefile = "";
 )
 {
     normal Nn = faceforward(normalize(N), I);
@@ -67,8 +68,11 @@ surface voronoi
     voronoi_f1f2_3d(P, f1, f2, pos1, pos2);
 
     f1 += noise(xcomp(P) * frequency, ycomp(P) * frequency) * 0.1 - 0.025;
-    Ci = step(0.05, f2-f1);
-    Ci = mix(gapColor, tileColor, Ci);
+    float c = step(0.05, f2-f1);
+    Ci = mix(gapColor, tileColor, c) - 0.5 * turbulence(P, 32);
+
+    if (bakefile != "")
+      bake(bakefile, s, t, c);
 
     Oi = Os;
     Ci *= Ka * ambient() + Kd * diffuse(Nn);

@@ -12,8 +12,12 @@ compile: $(SDL_TARGETS)
 bin/%.sdl: src/%.sl
 	shaderdl.exe -o $@ $<
 
-render: compile shadows
+render: compile shadows bake
 	renderdl.exe -id rib/platon.rib
+
+bake: compile
+	renderdl.exe rib/platon.rib
+	tdlmake.exe voronoi.bake voronoi.tdl
 
 shadows: compile
 	renderdl.exe rib/shadows.rib
@@ -23,4 +27,4 @@ convert: # using imagemagick
 	convert platon.tif platon.jpg
 
 clean:
-	rm *.tif *depth *.tdl
+	rm *.tif *.depth *.tdl *.bake
